@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TMU Teaching Practice Management Platform
+
+A comprehensive Progressive Web App (PWA) built for Tom Mboya University to streamline and manage the entire Teaching Practice workflow for administrators, lecturers, and student teachers.
+
+## Features
+
+- **Progressive Web App:** Fully installable on Desktop and Android devices with offline caching via Service Workers.
+- **Smart Allocations:** Automated assignment of lecturers to student teachers.
+- **Digital Assessments:** Built-in grading rubrics and high-fidelity PDF report generation.
+- **Real-Time Feedback:** Portfolio and lesson plan submission system with instant feedback.
+- **Institutional Branding:** Sleek, responsive, mobile-first design using the official TMU colors (Maroon, Blue, Gold).
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Database:** PostgreSQL with Prisma ORM
+- **Authentication:** NextAuth.js
+- **Styling:** Tailwind CSS & shadcn/ui
+- **Icons:** Lucide React
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Configure your `.env` with a PostgreSQL URL and NextAuth secret
+4. Run migrations with `npx prisma migrate dev`
+5. Start the development server with `npm run dev`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check the included `deploy.sh` script for streamlined deployment to a PM2/Nginx Ubuntu VPS environment.
